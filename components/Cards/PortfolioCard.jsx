@@ -1,6 +1,7 @@
+import next from 'next'
 import React, { useState, useRef } from 'react'
 
-const SkillsCard = ({ title, items, details }) => {
+const PortfolioCard = ({ title, items, details, links, nextPhases }) => {
   const [focusedObject, setFocusedObject] = useState(null)
   const scrollRef = useRef(null)
 
@@ -10,6 +11,8 @@ const SkillsCard = ({ title, items, details }) => {
     const compiledObject = Object.assign({
       item: items[i],
       detail: details[i],
+      link: links[i],
+      nextPhase: nextPhases[i],
     })
     compiledArray.push(compiledObject)
   }
@@ -44,11 +47,18 @@ const SkillsCard = ({ title, items, details }) => {
           </h3>
           <p className="font-medium"></p>
           <p className="pb-2 font-light"></p>
-          <p className="mt-1 italic xs:text-sm">Details:</p>
-          <ol className="flex list-disc flex-col place-items-start pl-6">
-            {focusedObject.detail.map((line) => (
-              <li className="text-left">{line}</li>
-            ))}
+          <p className="mt-1 italic xs:text-sm">Overview</p>
+          <ol className="flex list-none flex-col place-items-start pl-6">
+            <li className="text-left">{focusedObject.detail}</li>
+            <li className="py-4 text-left">{focusedObject.nextPhase}</li>
+            <li className=" pb-4 text-left">
+              <a
+                className="font-bold text-green-500 hover:text-green-400"
+                href={focusedObject.link}
+              >
+                Click here start Knock, you'll need to "knock" to sign-in!
+              </a>
+            </li>
           </ol>
         </div>
       ) : (
@@ -58,4 +68,4 @@ const SkillsCard = ({ title, items, details }) => {
   )
 }
 
-export default SkillsCard
+export default PortfolioCard

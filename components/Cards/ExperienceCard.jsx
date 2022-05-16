@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 const ExperienceCard = ({
   title,
@@ -9,7 +9,7 @@ const ExperienceCard = ({
   details,
 }) => {
   const [focusedObject, setFocusedObject] = useState(null)
-
+  const scrollRef = useRef(null)
   const compiledArray = []
 
   for (let i = 0; i < roles.length; i++) {
@@ -25,10 +25,14 @@ const ExperienceCard = ({
 
   const toggleFocus = (i) => {
     focusedObject?.role == i.role ? setFocusedObject(null) : setFocusedObject(i)
+    scrollRef.current.scrollIntoView()
   }
 
   return (
-    <div className="mb-3 rounded-xl border-2 p-4 shadow-lg transition ease-in hover:-translate-y-1 hover:shadow-blue-400">
+    <div
+      ref={scrollRef}
+      className="mb-3 rounded-xl border-2 p-4 shadow-lg transition ease-in hover:-translate-y-1 hover:shadow-blue-400"
+    >
       <h2 className="pb-2 text-4xl font-bold">{title}</h2>
       <div className="mt-3 flex flex-col place-items-center pb-2">
         {compiledArray.map((index) => (

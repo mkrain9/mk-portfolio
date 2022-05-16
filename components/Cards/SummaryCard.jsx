@@ -4,7 +4,7 @@ import PSULogo from '../../images/Penn-State-University-400x400.jpg'
 
 const SummaryCard = ({ title, items, details }) => {
   return (
-    <div className="mb-3 rounded-xl border-2 p-4 shadow-lg transition ease-in hover:-translate-y-1 hover:shadow-blue-400">
+    <div className="mb-3 rounded-3xl border-2 border-[#d5e0ee] p-4  shadow-neumorphic transition ease-in">
       <h2 className="pb-2 text-4xl font-bold">{title}</h2>
       <div className="flex flex-row flex-wrap justify-evenly">
         <div className="mt-3 flex">

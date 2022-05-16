@@ -1,27 +1,102 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import SummaryCard from '../components/Cards/SummaryCard'
 import ExperienceCard from '../components/Cards/ExperienceCard'
 import SkillsCard from '../components/Cards/SkillsCard'
+import PortfolioCard from '../components/Cards/PortfolioCard'
+import NeuBtn from '../components/Buttons/NeuBtn'
+
+import {
+  AiFillGithub,
+  AiOutlineLinkedin,
+  AiOutlineCode,
+  AiOutlineFileText,
+} from 'react-icons/ai'
+
+import { IoMdArrowDropdown } from 'react-icons/io'
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-blueGrey py-2">
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-4 text-center">
-        <h1 className="font-bold sm:text-4xl md:text-5xl lg:text-6xl xs:text-2xl ">
-          Matthew Krain{' '}
-          <a className=" text-blue-500 hover:text-blue-300" href="/">
-            | Software Developer
-          </a>
-        </h1>
-        <h2 className="typing w-full py-4 text-2xl font-light">About Me</h2>
-        <p className="px-6">
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-row font-bold sm:text-4xl md:text-5xl lg:text-6xl xs:text-xl ">
+            <h1 className="pb-4">Matthew Krain </h1>
+            <h1 className="bg-blue-400 pb-4 subpixel-antialiased">
+              | Software Developer
+            </h1>
+          </div>
+          <div className="flex w-full flex-row justify-evenly md:pt-4 lg:pt-4 xs:justify-between">
+            <NeuBtn
+              route="projects"
+              target="_parent"
+              color="text-red"
+              w="2"
+              h="2"
+            >
+              <AiOutlineCode className="h-7 w-7" />
+              <p>Projects</p>
+            </NeuBtn>
+            <NeuBtn
+              route="resume"
+              target="_parent"
+              color="text-yellow"
+              w="2"
+              h="2"
+            >
+              <AiOutlineFileText className="h-7 w-7" />
+              <p>Resume</p>
+            </NeuBtn>
+            <NeuBtn
+              route="https://linkedin.com/in/matthew-krain-9b0a67132"
+              target="_blank"
+              color="text-blue"
+              w="2"
+              h="2"
+            >
+              <AiOutlineLinkedin className="h-7 w-7" />
+              <p>LinkedIn</p>
+            </NeuBtn>
+            <NeuBtn
+              route="https://github.com/mkrain9"
+              target="_blank"
+              color="text-stone"
+              w="3"
+              h="2"
+            >
+              <AiFillGithub className="h-7 w-7" />
+              <p>Github</p>
+            </NeuBtn>
+          </div>
+          <div className="flex w-full flex-wrap justify-evenly pt-6 font-light sm:flex-col md:flex-row lg:flex-row xs:flex-col">
+            <h3 className="sm:pb-2 md:pb-0 lg:pb-0  lg:text-2xl xs:pb-2">
+              <b className="font-bold">Phone: </b>
+              1-856-904-7940
+            </h3>
+
+            <h3 className="lg:text-2xl">
+              <b className="font-bold">Email: </b>
+              Krainm9@gmail.com
+            </h3>
+          </div>
+          <div className="absolute bottom-1/4">
+            <a
+              href="/projects"
+              className="flex flex-col items-center justify-center"
+            >
+              <p className="border-b-2 border-white p-1 hover:p-2">Projects</p>
+              <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
+            </a>
+          </div>
+        </div>
+        {/* 
+        <h2 className="typing my-6 text-2xl font-light">About Me</h2>
+        <p className="max-w-6xl px-6">
           <p className=" mb-6 text-left">
             An <b className="text-blue-400">Engineer</b> fascinated with the
             mechanisms of{' '}
@@ -36,12 +111,12 @@ const Home = () => {
             in <b className="text-blue-400">Chemical Engineering</b> from Penn
             State University.
           </p>
-          <p className="mb-6 text-right">
+          <p className="mb-6 text-left">
             Excelling in <i>thermodynamics</i>, <i>transfer phenoma</i>,{' '}
             <i>separations</i>, and <i>organic chemistry</i>, <br />I loved that
             I could <b className="text-blue-400">never</b> stop learning.
           </p>
-          <p className="mb-6 border-b-2 pb-6 text-right">
+          <p className="mb-6 border-b-2 pb-6 text-left">
             After graduating, I started my career in the{' '}
             <b className="text-blue-400">Chemicals Supply Chain Industry</b>{' '}
             working for Ecolab.
@@ -75,7 +150,7 @@ const Home = () => {
           </p>
         </p>
 
-        <div className="mt-6 grid max-w-2xl gap-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xs:grid-cols-1 ">
+        <div className="mt-6 grid max-w-6xl grid-cols-1 gap-2 lg:w-full ">
           <SummaryCard
             title={'Education'}
             items={['College', 'Degree', 'Graduation']}
@@ -94,19 +169,22 @@ const Home = () => {
             ]}
             locations={['McDonough, GA', 'McDonough, GA', 'Joliet,IL']}
             companies={['Ecolab', 'Ecolab', 'Ecolab']}
-            roles={['SAP Team Leader', 'Mixing Team Leader', 'EH&S Specialist']}
+            roles={[
+              'SAP Team Leader',
+              'Mixing Production Area Team Leader',
+              'EH&S Specialist',
+            ]}
             details={[
               [
-                'Reduced material loss through program gap identification',
                 'Automated repetitive tasks to improve daily productivity',
-                'Guided reconfiguration of SAP system processes',
+                'Reduced material loss through identification of inventory program gaps',
                 'Trained and developed SAP Specialists on new processes',
                 'Used the role of TPM Pillar Leader to spearhead the SHE TPM Pillar’s Journey To Bronze.',
               ],
               [
-                'Led a department of 13 chemical mixers across 2 shifts to meet and surpass daily/weekly/monthly production targets.',
+                'Led a department of 13 chemical mixers across 2 shifts to meet and surpass production targets.',
                 'Eliminated production losses through defect identification and prevention.',
-                'Eliminated First Aids by implemented a pro-safety shift startup: reviewing daily risks, team progress on safety metrics, and empowering the use of Stop Work Authority.',
+                'Eliminated First Aids for the highest risk department by implemented a pro-safety shift startup: reviewing daily risks, team progress on safety metrics, and empowering the use of Stop Work Authority.',
                 'Used the role TPM Pillar Leader to spearhead the SHE TPM Pillar’s Journey To Bronze.',
               ],
               [
@@ -150,22 +228,22 @@ const Home = () => {
               ],
             ]}
           />
-          <SummaryCard
+          <PortfolioCard
             title={'Published Work'}
-            items={['Languages', 'Frontend', 'Backend', 'Database']}
+            items={['Knock']}
             details={[
-              'Javascript, HTML, CSS',
-              'ReactJS, TailwindCSS, React-Query (API), React-',
-              'Express',
-              'MongoDB',
+              "Knock is a Full Stack Application utilizing MongoDB's Cloud Database, optimized for mobile use. Knock in short, is a kitchen inventory management system, that keeps track of your ingredients.",
             ]}
+            nextPhases={[
+              "Next phase will incorporate a Social Feed that will allow users to post Recipes along with required ingredients. Your ingredients will be compared to determine if the recipe can be made or if you're missing an egg or two!",
+            ]}
+            links={['https://knock-app.netlify.app/']}
           />
-        </div>
+        </div>*/}
       </main>
 
-      <footer className="flex h-24 w-full flex-col items-center justify-center border-t">
-        <a href="/contact">Contact</a>
-        <p>Updated 5/8/2022</p>
+      <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
+        <p>Updated 5/11/2022</p>
       </footer>
     </div>
   )

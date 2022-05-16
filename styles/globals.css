@@ -3,11 +3,54 @@
 @tailwind utilities;
 @tailwindcss /line-clamp;
 
+@layer utilities {
+  @variants responsive {
+    .text-shadow {
+      text-shadow: 1px 2px 3px rgb(255, 255, 255, 0.5);
+    }
+    .text-shadow-md {
+      text-shadow: 5px 6px 11px rgb(255, 255, 255, 0.5);
+    }
+    .text-shadow-lg {
+      text-shadow: 16px 17px 33px rgb(255, 255, 255, 0.5);
+    }
+    .text-shadow-none {
+      text-shadow: none;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li {
+  background-color: #8898b4;
+  color: #dde4ec;
+  color: transparent;
+  text-shadow: 1px 2px 3px rgb(255, 255, 255, 0.5);
+  background-clip: text;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.neuGradient {
+  background: linear-gradient(-45deg, #8898b422, rgba(255, 255, 255, 0.25));
+}
+
+.neugradient:active {
+  background: linear-gradient(135deg, #8898b422, rgba(255, 255, 255, 0.25));
+}
+
 .typing {
   overflow: hidden;
-  border-right: 0.15em solid orange;
+  border-right: 0.12em solid black;
   white-space: nowrap;
-  animation: typing 5s steps(100, end) forwards;
+  animation: typing 1s steps(25, end) forwards, blink 0.5s 1s ease-out infinite;
   width: 0;
 }
 
@@ -16,6 +59,39 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 110px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: black;
+  }
+  to {
+    border-color: rgb(169, 169, 169);
+  }
+}
+
+.lightSwitch {
+  background-image: linear-gradient(
+    to right,
+    #56565600 10%,
+    rgb(76, 255, 56) 70%
+  );
+  animation: lightPulse 1s 0.5s ease-out forwards;
+}
+
+@keyframes lightPulse {
+  0% {
+    background-position-x: 0px;
+  }
+  20% {
+    background-position-x: 1000px;
+  }
+  30% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 600px;
   }
 }
