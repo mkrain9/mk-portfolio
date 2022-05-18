@@ -32,48 +32,32 @@ const Home = () => {
             </h1>
           </div>
           <div className="flex w-full flex-row justify-evenly md:pt-4 lg:pt-4 xs:justify-between">
-            <NeuBtn
-              route="projects"
-              target="_parent"
-              color="text-red"
-              w="2"
-              h="2"
-            >
-              <AiOutlineCode className="h-7 w-7" />
+            <NeuBtn route="projects" target="_parent" color="text-red">
+              <AiOutlineCode className="h-7 w-7 text-red-400 hover:text-red-500" />
               <p>Projects</p>
             </NeuBtn>
-            <NeuBtn
-              route="resume"
-              target="_parent"
-              color="text-yellow"
-              w="2"
-              h="2"
-            >
-              <AiOutlineFileText className="h-7 w-7" />
+            <NeuBtn route="resume" target="_parent" color="text-yellow">
+              <AiOutlineFileText className="h-7 w-7 text-yellow-400 hover:text-yellow-500" />
               <p>Resume</p>
             </NeuBtn>
             <NeuBtn
               route="https://linkedin.com/in/matthew-krain-9b0a67132"
               target="_blank"
               color="text-blue"
-              w="2"
-              h="2"
             >
-              <AiOutlineLinkedin className="h-7 w-7" />
+              <AiOutlineLinkedin className="h-7 w-7 text-blue-400 hover:text-blue-500" />
               <p>LinkedIn</p>
             </NeuBtn>
             <NeuBtn
               route="https://github.com/mkrain9"
               target="_blank"
               color="text-stone"
-              w="3"
-              h="2"
             >
-              <AiFillGithub className="h-7 w-7" />
+              <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
               <p>Github</p>
             </NeuBtn>
           </div>
-          <div className="flex w-full flex-wrap justify-evenly pt-6 font-light sm:flex-col md:flex-row lg:flex-row xs:flex-col">
+          <div className="flex w-full flex-wrap justify-evenly pt-6 font-light sm:flex-col md:flex-row lg:flex-row xs:flex-col xs:text-left">
             <h3 className="sm:pb-2 md:pb-0 lg:pb-0  lg:text-2xl xs:pb-2">
               <b className="font-bold">Phone: </b>
               1-856-904-7940
