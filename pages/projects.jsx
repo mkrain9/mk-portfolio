@@ -100,7 +100,7 @@ const projects = () => {
                     <p>Code</p>
                   </NeuBtn>
                 </div>
-                <div className="mt-4 flex w-full flex-row place-content-center border-t-2 border-b-2 pb-4 pl-4 pr-4 pt-0 xs:overflow-x-scroll">
+                <div className="mt-4 flex w-full flex-row place-content-center border-t-2 border-b-2 pb-4 pl-4 pr-8 pt-0 xs:overflow-x-scroll">
                   <div className="flex flex-row gap-x-6 xs:ml-[28rem]">
                     <IPhoneCard
                       image={KnockHomeScreen}

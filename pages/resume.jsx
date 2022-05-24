@@ -57,7 +57,7 @@ const resume = () => {
                     dx={-60}
                     dy={-30}
                     connectorProps={{
-                      stroke: '#FF5533',
+                      stroke: '#075985',
                       strokeWidth: 2,
                       strokeLinecap: 'round',
                     }}
@@ -67,7 +67,7 @@ const resume = () => {
                       y="-5"
                       textAnchor="end"
                       alignmentBaseline="middle"
-                      fill="#F53"
+                      fill="#075985"
                       className="font-bold"
                     >
                       McDonough, GA
@@ -78,7 +78,7 @@ const resume = () => {
                     dx={-60}
                     dy={-30}
                     connectorProps={{
-                      stroke: '#FF5533',
+                      stroke: '#075985',
                       strokeWidth: 2,
                       strokeLinecap: 'round',
                     }}
@@ -88,7 +88,7 @@ const resume = () => {
                       y="-5"
                       textAnchor="end"
                       alignmentBaseline="middle"
-                      fill="#F53"
+                      fill="#075985"
                       className="font-bold"
                     >
                       Joliet, IL
@@ -99,7 +99,7 @@ const resume = () => {
                     dx={-60}
                     dy={-30}
                     connectorProps={{
-                      stroke: '#FF5533',
+                      stroke: '#075985',
                       strokeWidth: 2,
                       strokeLinecap: 'round',
                     }}
@@ -109,7 +109,7 @@ const resume = () => {
                       y="-5"
                       textAnchor="end"
                       alignmentBaseline="middle"
-                      fill="#F53"
+                      fill="#075985"
                       className="font-bold"
                     >
                       Los Alamos, NM
@@ -120,7 +120,7 @@ const resume = () => {
                     dx={-60}
                     dy={-30}
                     connectorProps={{
-                      stroke: '#FF5533',
+                      stroke: '#075985',
                       strokeWidth: 2,
                       strokeLinecap: 'round',
                     }}
@@ -130,7 +130,7 @@ const resume = () => {
                       y="-5"
                       textAnchor="end"
                       alignmentBaseline="middle"
-                      fill="#F53"
+                      fill="#075985"
                       className="font-bold"
                     >
                       Hazleton, PA
@@ -141,7 +141,7 @@ const resume = () => {
                     dx={-60}
                     dy={30}
                     connectorProps={{
-                      stroke: '#FF5533',
+                      stroke: '#075985',
                       strokeWidth: 2,
                       strokeLinecap: 'round',
                     }}
@@ -151,26 +151,26 @@ const resume = () => {
                       y="-5"
                       textAnchor="end"
                       alignmentBaseline="middle"
-                      fill="#F53"
+                      fill="#075985"
                       className="font-bold"
                     >
                       State College, PA
                     </text>
                   </Annotation>
                   <Marker coordinates={[-84.388, 33.749]}>
-                    <circle r={8} fill="#F53" />
+                    <circle r={8} fill="#075985" />
                   </Marker>
                   <Marker coordinates={[-87.6298, 41.8781]}>
-                    <circle r={8} fill="#F53" />
+                    <circle r={8} fill="#075985" />
                   </Marker>
                   <Marker coordinates={[-106.3031, 35.88]}>
-                    <circle r={8} fill="#F53" />
+                    <circle r={8} fill="#075985" />
                   </Marker>
                   <Marker coordinates={[-75.9746, 40.9584]}>
-                    <circle r={8} fill="#F53" />
+                    <circle r={8} fill="#075985" />
                   </Marker>
                   <Marker coordinates={[-77.86, 40.7934]}>
-                    <circle r={8} fill="#F53" />
+                    <circle r={8} fill="#075985" />
                   </Marker>
                 </ComposableMap>
               </div>
