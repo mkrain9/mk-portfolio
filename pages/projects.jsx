@@ -27,7 +27,7 @@ const projects = () => {
         </div>
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative top-20 font-bold sm:text-6xl md:text-6xl lg:text-6xl xs:text-6xl ">
-            <h1 className="pb-24">Projects</h1>
+            <h1 className="pb-24 pt-20">Projects</h1>
           </div>
           <div className="sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
             <div className="relative top-20 flex flex-row border-b-2">
@@ -38,32 +38,58 @@ const projects = () => {
                 Kitchen Inventory Application
               </p>
             </div>
-            <div className="relative top-20 ">
+            <div className="relative top-20 pt-10">
               <div className="relative left-0">
-                <h3 className=" flex place-items-start bg-purple-400 pt-8 pb-2 font-bold italic">
-                  Details
-                </h3>
-                <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-bold">
-                  <li>Full Stack MERN Application</li>
-                  <li>Auth0 Integration</li>
-                  <li>MongoDB Cloud Services</li>
-                  <li>One to Many | Many to Many Data Structure</li>
-                  <li>Frontend hosted on Netlify</li>
-                  <li>Server hosted on Heroku</li>
-                </ol>
-                <h3 className="flex place-items-start bg-purple-400 py-2 font-bold italic ">
-                  Future Plans
-                </h3>
-                <ol className="flex list-outside list-none flex-col place-items-start gap-y-2 pl-4 text-left font-bold">
-                  <li>
-                    Implement Recipe System that will evaluate available
-                    inventory.
-                  </li>
-                  <li>
-                    Implement Social Feed for chefs and hobbiest to connect,
-                    share, comment, and like recipes.
-                  </li>
-                </ol>
+                <div className="neuGradient  h-full rounded-3xl p-10 pt-8 shadow-neumorphic">
+                  <h3 className="standard flex place-items-start text-xl font-bold text-sky-800">
+                    Details
+                  </h3>
+                  <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-normal">
+                    <li className="standard ">Full Stack MERN Application</li>
+                    <li className="standard">
+                      Auth0 Integration utilizing JSON Web Tokens
+                    </li>
+                    <li className="standard">MongoDB Cloud Services</li>
+                    <li className="standard">
+                      One to Many | Many to One | Many to Many Data Structures
+                    </li>
+                    <li className="standard">Frontend hosted on Netlify</li>
+                    <li className="standard">Server hosted on Heroku</li>
+                  </ol>
+                  <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
+                    Blog
+                  </h3>
+                  <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-bold">
+                    <li>
+                      <a href="/projects">
+                        <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
+                          Creating Dynamically Nested Components
+                        </h3>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/projects">
+                        <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
+                          Utilizing MongoDB Aggregate Pipeline to create
+                          relationships
+                        </h3>
+                      </a>
+                    </li>
+                  </ol>
+                  <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
+                    Future Plans
+                  </h3>
+                  <ol className="flex list-outside list-none flex-col place-items-start gap-y-2 pl-4 text-left font-normal">
+                    <li className="standard">
+                      Implement Recipe System that will evaluate available
+                      inventory.
+                    </li>
+                    <li className="standard">
+                      Implement Social Feed for chefs and hobbiest to connect,
+                      share, comment, and like recipes.
+                    </li>
+                  </ol>
+                </div>
                 <div className="flex place-content-center pt-6">
                   <NeuBtn
                     route="https://github.com/mkrain9"

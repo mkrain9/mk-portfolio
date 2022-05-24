@@ -34,6 +34,11 @@ li {
   background-clip: text;
 }
 
+.standard {
+  text-shadow: none;
+  background-clip: none;
+}
+
 * {
   scroll-behavior: smooth;
 }
