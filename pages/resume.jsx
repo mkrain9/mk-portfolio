@@ -34,7 +34,7 @@ const resume = () => {
             className="flex flex-col items-center justify-center"
           >
             <IoMdArrowDropup className="h-7 w-7 text-blueSteel" />
-            <p className="border-t-2 border-white p-1 hover:p-2">Projects</p>
+            <p className="border-t-2 border-white p-1 hover:px-4">Projects</p>
           </a>
         </div>
         <div className="flex w-full flex-col items-center justify-center">
@@ -48,7 +48,7 @@ const resume = () => {
             </div>
             <NeuCard data={EDUData} title={'Education'} />
             <div className="relative flex place-content-center gap-x-4 sm:flex-col md:flex-col lg:flex-row xs:flex-col">
-              <div className="top-56 mb-6 h-full w-full max-w-3xl overflow-hidden rounded-3xl shadow-neumorphic lg:sticky xs:w-full">
+              <div className="top-56 mb-6 h-full w-full max-w-3xl overflow-hidden rounded-3xl shadow-neumorphic lg:sticky xs:hidden xs:w-full">
                 <ComposableMap projection="geoAlbers">
                   <Geographies geography={geoUrl}>
                     {({ geographies }) =>
@@ -183,11 +183,8 @@ const resume = () => {
                     <circle r={8} fill="#075985" />
                   </Marker>
                 </ComposableMap>
-                <p className="-translate-y-4">
-                  Locations where I have worked and learned
-                </p>
               </div>
-              <div className="sm:pt-14 md:pt-14 lg:pt-0 xs:pt-14">
+              <div className="sm:pt-0 md:pt-14 lg:pt-0 xs:pt-0">
                 <div className="relative left-0">
                   <NeuCard data={PEData} title="Professional Experience" />
                 </div>
@@ -202,7 +199,7 @@ const resume = () => {
               href="/resume"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:p-2">Blog</p>
+              <p className="border-b-2 border-white p-1 hover:px-4">Blog</p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>

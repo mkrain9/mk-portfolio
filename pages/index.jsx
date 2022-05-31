@@ -73,7 +73,7 @@ const Home = () => {
               href="/projects"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:p-2">Projects</p>
+              <p className="border-b-2 border-white p-1 hover:px-4">Projects</p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>
