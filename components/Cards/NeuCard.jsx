@@ -51,26 +51,23 @@ const NeuCard = ({ data, title }) => {
                   {index.location ? index.location : null}
                 </h4>
               </div>
-              <div className={`${index.section ? '' : 'hidden'}`}>
+              <div>
+                <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
+              </div>
+            </div>
+            <ol className="flex list-none flex-col place-items-start gap-y-4 pl-2 text-left font-normal xs:pl-0">
+              {index.details.map((item) => (
                 <NeuElement
                   shadowInner={true}
-                  height={'h-4'}
+                  height={'h-min'}
                   width={'w-full'}
                   radius={'rounded-3xl'}
                   paddingX={'px-3'}
                 >
-                  <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
+                  <li key={item} className="standard w-full py-2">
+                    {item}
+                  </li>
                 </NeuElement>
-              </div>
-            </div>
-            <ol className="flex list-none flex-col place-items-start gap-y-1 pl-2 text-left font-normal xs:pl-0">
-              {index.details.map((item) => (
-                <li
-                  key={item}
-                  className="standard w-full border-b-2 border-indigo-200 py-2"
-                >
-                  {item}
-                </li>
               ))}
             </ol>
           </>
@@ -82,24 +79,26 @@ const NeuCard = ({ data, title }) => {
             >
               {index.section}
             </h3>
-            <NeuElement
-              shadowInner={true}
-              height={'h-4'}
-              width={'w-full'}
-              radius={'rounded-3xl'}
-              paddingX={'px-3'}
-            >
-              <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
-            </NeuElement>
+
+            <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
+
             <ol className="flex list-none flex-col place-items-start gap-y-1 pl-2 text-left font-bold xs:pl-0">
               {index.details.map((item) => (
-                <li className="w-full">
-                  <a key={item.link} href={`/${item.link}`}>
-                    <h3 className="standard border-b-2 border-indigo-200 bg-yellow-400 py-2 font-normal hover:bg-sky-600">
-                      {item}
-                    </h3>
-                  </a>
-                </li>
+                <NeuElement
+                  shadowInner={true}
+                  height={'h-min'}
+                  width={'w-full'}
+                  radius={'rounded-3xl'}
+                  paddingX={'px-3'}
+                >
+                  <li className="w-full">
+                    <a key={item.link} href={`/${item.link}`}>
+                      <h3 className="standard bg-yellow-400 py-2 font-normal hover:bg-sky-600">
+                        {item}
+                      </h3>
+                    </a>
+                  </li>
+                </NeuElement>
               ))}
             </ol>
           </>
