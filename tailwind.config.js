@@ -13,7 +13,7 @@ module.exports = {
       },
       boxShadow: {
         neumorphic:
-          '8px 7px 10px  rgba(0, 0, 0, 0.25), -8px -8px 10px rgba(255, 255, 255, 0.3)',
+          '5px 5px 7px  rgba(0, 0, 0, 0.25), -5px -5px 7px rgba(255, 255, 255, 0.43)',
       },
       colors: {
         blueGrey: '#dde4ec',

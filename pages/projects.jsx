@@ -45,7 +45,7 @@ const projects = () => {
             <div className="relative top-20">
               <div className="relative left-0">
                 <div className="mb-10 flex w-full flex-row place-content-center border-b-2 pb-4 pl-4 pr-4 pt-0 xs:overflow-x-scroll">
-                  <div className="flex flex-row gap-x-6 xs:mr-[2rem] xs:ml-[28rem]">
+                  <div className="flex flex-row gap-x-6 xs:mr-[4rem] xs:ml-[32rem]">
                     <IPhoneCard
                       image={KnockHomeScreen}
                       description={'"Knock" to sign-in'}

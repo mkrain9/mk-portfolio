@@ -1,4 +1,5 @@
 import React from 'react'
+import NeuElement from '../Elements/NeuElement'
 
 const NeuCard = ({ data, title }) => {
   const dataArray = []
@@ -8,16 +9,25 @@ const NeuCard = ({ data, title }) => {
   const header = title ? title : null
   return (
     <div className="mb-6 flex h-full flex-col gap-y-2 rounded-3xl p-10 shadow-neumorphic">
-      <h3
-        key={title}
-        className="standard flex place-items-start text-xl font-bold text-sky-800"
+      <NeuElement
+        shadowInner={false}
+        height={'h-min'}
+        width={'w-min'}
+        radius={'rounded-full'}
+        paddingX={`${header ? 'px-8' : 'px-4'}`}
+        paddingY={'py-4'}
       >
-        {header}
-      </h3>
+        <h3
+          key={header}
+          className="standard flex place-items-start text-xl font-bold text-sky-800"
+        >
+          {header}
+        </h3>
+      </NeuElement>
       {dataArray.map((index) =>
         index.section !== 'Blog' ? (
           <>
-            <div>
+            <div className="flex flex-col pt-8">
               <h3
                 key={index.section}
                 className={`standard flex place-items-start text-left ${
@@ -28,8 +38,9 @@ const NeuCard = ({ data, title }) => {
               >
                 {index.section}
               </h3>
+
               <div
-                className={`standard flex flex flex-row place-items-start justify-between border-b-2 border-sky-400 ${
+                className={`standard flex flex flex-row place-items-start justify-between  ${
                   header ? 'py-2' : 'pb-1'
                 } text-sm xs:flex-col `}
               >
@@ -39,6 +50,17 @@ const NeuCard = ({ data, title }) => {
                 <h4 className="text-sky-400" key={index.section}>
                   {index.location ? index.location : null}
                 </h4>
+              </div>
+              <div className={`${index.section ? '' : 'hidden'}`}>
+                <NeuElement
+                  shadowInner={true}
+                  height={'h-4'}
+                  width={'w-full'}
+                  radius={'rounded-3xl'}
+                  paddingX={'px-3'}
+                >
+                  <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
+                </NeuElement>
               </div>
             </div>
             <ol className="flex list-none flex-col place-items-start gap-y-1 pl-2 text-left font-normal xs:pl-0">
@@ -56,10 +78,19 @@ const NeuCard = ({ data, title }) => {
           <>
             <h3
               key={index.section}
-              className="standard flex place-items-start border-b-2 border-sky-400 pb-1 text-xl font-bold text-sky-800"
+              className="standard flex place-items-start pb-1 text-xl font-bold text-sky-800"
             >
               {index.section}
             </h3>
+            <NeuElement
+              shadowInner={true}
+              height={'h-4'}
+              width={'w-full'}
+              radius={'rounded-3xl'}
+              paddingX={'px-3'}
+            >
+              <div className="flex h-[2px] min-h-0 w-full place-self-center bg-sky-400" />
+            </NeuElement>
             <ol className="flex list-none flex-col place-items-start gap-y-1 pl-2 text-left font-bold xs:pl-0">
               {index.details.map((item) => (
                 <li className="w-full">

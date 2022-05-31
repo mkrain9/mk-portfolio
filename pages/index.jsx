@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import SummaryCard from '../components/Cards/SummaryCard'
 import ExperienceCard from '../components/Cards/ExperienceCard'
