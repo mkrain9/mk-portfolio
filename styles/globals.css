@@ -47,10 +47,6 @@ li {
   background: linear-gradient(-45deg, #8898b422, rgba(255, 255, 255, 0.25));
 }
 
-.neugradient:active {
-  background: linear-gradient(135deg, #8898b422, rgba(255, 255, 255, 0.25));
-}
-
 .typing {
   overflow: hidden;
   border-right: 0.12em solid black;

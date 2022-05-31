@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io'
@@ -10,7 +10,12 @@ import {
   Annotation,
 } from 'react-simple-maps'
 
+import NeuCard from '../components/Cards/NeuCard'
 import NeuBtn from '../components/Buttons/NeuBtn'
+import EData from '../data/summary.json'
+import EDUData from '../data/education.json'
+import PEData from '../data/resume_professional_experience.json'
+import SData from '../data/resume_skills.json'
 
 const geoUrl =
   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json'
@@ -36,9 +41,14 @@ const resume = () => {
           <div className="relative top-20 font-bold sm:text-6xl md:text-6xl lg:text-6xl xs:text-6xl ">
             <h1 className="pb-24 pt-20">Resume</h1>
           </div>
+
           <div className="sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
-            <div className="relative top-20 flex place-content-center gap-x-4 border-b-2 sm:flex-col md:flex-col lg:flex-row xs:flex-col">
-              <div className="top-56 h-full w-full max-w-3xl overflow-hidden rounded-3xl shadow-neumorphic lg:sticky lg:mt-[68px] xs:w-full">
+            <div className="mt-14">
+              <NeuCard data={EData} title={'Executive Summary'} />
+            </div>
+            <NeuCard data={EDUData} title={'Education'} />
+            <div className="relative flex place-content-center gap-x-4 sm:flex-col md:flex-col lg:flex-row xs:flex-col">
+              <div className="top-56 mb-6 h-full w-full max-w-3xl overflow-hidden rounded-3xl shadow-neumorphic lg:sticky xs:w-full">
                 <ComposableMap projection="geoAlbers">
                   <Geographies geography={geoUrl}>
                     {({ geographies }) =>
@@ -173,116 +183,18 @@ const resume = () => {
                     <circle r={8} fill="#075985" />
                   </Marker>
                 </ComposableMap>
+                <p className="-translate-y-4">
+                  Locations where I have worked and learned
+                </p>
               </div>
               <div className="sm:pt-14 md:pt-14 lg:pt-0 xs:pt-14">
-                <h2 className="flex place-content-center pb-5 text-5xl font-bold">
-                  Education
-                </h2>
                 <div className="relative left-0">
-                  <div className="neuGradient  h-full rounded-3xl p-10 pt-8 shadow-neumorphic">
-                    <h3 className="standard flex place-items-start text-xl font-bold text-sky-800">
-                      Details
-                    </h3>
-                    <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-normal">
-                      <li className="standard ">Full Stack MERN Application</li>
-                      <li className="standard">
-                        Auth0 Integration utilizing JSON Web Tokens
-                      </li>
-                      <li className="standard">MongoDB Cloud Services</li>
-                      <li className="standard">
-                        One to Many | Many to One | Many to Many Data Structures
-                      </li>
-                      <li className="standard">Frontend hosted on Netlify</li>
-                      <li className="standard">Server hosted on Heroku</li>
-                    </ol>
-                    <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                      Blog
-                    </h3>
-                    <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-bold">
-                      <li>
-                        <a href="/projects">
-                          <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                            Creating Dynamically Nested Components
-                          </h3>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/projects">
-                          <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                            Utilizing MongoDB Aggregate Pipeline to create
-                            relationships
-                          </h3>
-                        </a>
-                      </li>
-                    </ol>
-                    <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                      Future Plans
-                    </h3>
-                    <ol className="flex list-outside list-none flex-col place-items-start gap-y-2 pl-4 text-left font-normal">
-                      <li className="standard">
-                        Implement Recipe System that will evaluate available
-                        inventory.
-                      </li>
-                      <li className="standard">
-                        Implement Social Feed for chefs and hobbiest to connect,
-                        share, comment, and like recipes.
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-                <div className="relative left-0">
-                  <div className="neuGradient  h-full rounded-3xl p-10 pt-8 shadow-neumorphic">
-                    <h3 className="standard flex place-items-start text-xl font-bold text-sky-800">
-                      Details
-                    </h3>
-                    <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-normal">
-                      <li className="standard ">Full Stack MERN Application</li>
-                      <li className="standard">
-                        Auth0 Integration utilizing JSON Web Tokens
-                      </li>
-                      <li className="standard">MongoDB Cloud Services</li>
-                      <li className="standard">
-                        One to Many | Many to One | Many to Many Data Structures
-                      </li>
-                      <li className="standard">Frontend hosted on Netlify</li>
-                      <li className="standard">Server hosted on Heroku</li>
-                    </ol>
-                    <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                      Blog
-                    </h3>
-                    <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-bold">
-                      <li>
-                        <a href="/projects">
-                          <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                            Creating Dynamically Nested Components
-                          </h3>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/projects">
-                          <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                            Utilizing MongoDB Aggregate Pipeline to create
-                            relationships
-                          </h3>
-                        </a>
-                      </li>
-                    </ol>
-                    <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                      Future Plans
-                    </h3>
-                    <ol className="flex list-outside list-none flex-col place-items-start gap-y-2 pl-4 text-left font-normal">
-                      <li className="standard">
-                        Implement Recipe System that will evaluate available
-                        inventory.
-                      </li>
-                      <li className="standard">
-                        Implement Social Feed for chefs and hobbiest to connect,
-                        share, comment, and like recipes.
-                      </li>
-                    </ol>
-                  </div>
+                  <NeuCard data={PEData} title="Professional Experience" />
                 </div>
               </div>
+            </div>
+            <div className="relative top-0">
+              <NeuCard data={SData} title="Skills" />
             </div>
           </div>
           <div className="relative bottom-0 mt-32">
@@ -290,7 +202,7 @@ const resume = () => {
               href="/resume"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:p-2">Resume</p>
+              <p className="border-b-2 border-white p-1 hover:p-2">Blog</p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>

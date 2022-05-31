@@ -1,0 +1,45 @@
+{
+  "0": {
+    "section": "Languages",
+    "details": ["Javascript", "HTML", "CSS", "Python", "C#", "VBScript", "DAX"]
+  },
+  "1": {
+    "section": "Frontend",
+
+    "details": [
+      "ReactJS",
+      "NextJS",
+      "TailwindCSS",
+      "Axios API Calls",
+      "React Query",
+      "React Redux",
+      "Framer Motion",
+      "Moment"
+    ]
+  },
+  "2": {
+    "section": "Backend",
+    "details": ["NodeJS", "Express"]
+  },
+  "3": {
+    "section": "Database",
+    "details": ["MongoDB Atlas (Cloud)", "MySQL"]
+  },
+  "4": {
+    "section": "Hosting",
+    "details": ["Netlify", "Heroku", "Vercel"]
+  },
+  "5": {
+    "section": "Additional Skills",
+    "details": [
+      "Leading Teams and Leading Without Authority",
+      "Defect Analysis",
+      "Process and System Development",
+      "Public Speaking and Collaboration",
+      "Expert in Mathematics and Logical Thinking",
+      "Quick Learning and Comprehension",
+      "Mastery in Excel and Microsoft Office Tools",
+      "PowerBI Dashboards"
+    ]
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
-import { AiOutlineCode } from 'react-icons/ai'
+import { AiOutlineCode, AiFillGithub } from 'react-icons/ai'
 
 import KnockHomeScreen from '../images/KnockHomeScreen.PNG'
 import KnockItemsScreen from '../images/KnockItemsScreen.PNG'
@@ -10,6 +10,10 @@ import KnockKitchenScreen from '../images/KnockKitchenScreen.PNG'
 
 import NeuBtn from '../components/Buttons/NeuBtn'
 import IPhoneCard from '../components/Cards/IPhoneCard'
+import NeuCard from '../components/Cards/NeuCard'
+
+import Kdata from '../data/knock_project.json'
+import Wdata from '../data/porfolio_project.json'
 
 const projects = () => {
   return (
@@ -29,7 +33,7 @@ const projects = () => {
           <div className="relative top-20 font-bold sm:text-6xl md:text-6xl lg:text-6xl xs:text-6xl ">
             <h1 className="pb-24 pt-20">Projects</h1>
           </div>
-          <div className="sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
+          <div className="mb-40 sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
             <div className="relative top-20 flex flex-row border-b-2">
               <h2 className="flex place-items-start pb-5 text-5xl font-bold">
                 Knock
@@ -38,70 +42,10 @@ const projects = () => {
                 Kitchen Inventory Application
               </p>
             </div>
-            <div className="relative top-20 pt-10">
+            <div className="relative top-20">
               <div className="relative left-0">
-                <div className="neuGradient  h-full rounded-3xl p-10 pt-8 shadow-neumorphic">
-                  <h3 className="standard flex place-items-start text-xl font-bold text-sky-800">
-                    Details
-                  </h3>
-                  <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-normal">
-                    <li className="standard ">Full Stack MERN Application</li>
-                    <li className="standard">
-                      Auth0 Integration utilizing JSON Web Tokens
-                    </li>
-                    <li className="standard">MongoDB Cloud Services</li>
-                    <li className="standard">
-                      One to Many | Many to One | Many to Many Data Structures
-                    </li>
-                    <li className="standard">Frontend hosted on Netlify</li>
-                    <li className="standard">Server hosted on Heroku</li>
-                  </ol>
-                  <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                    Blog
-                  </h3>
-                  <ol className="flex list-none flex-col place-items-start gap-y-1 pl-4 text-left font-bold">
-                    <li>
-                      <a href="/projects">
-                        <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                          Creating Dynamically Nested Components
-                        </h3>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/projects">
-                        <h3 className="standard bg-yellow-400 font-normal hover:bg-sky-600">
-                          Utilizing MongoDB Aggregate Pipeline to create
-                          relationships
-                        </h3>
-                      </a>
-                    </li>
-                  </ol>
-                  <h3 className="flex place-items-start py-2 text-xl font-bold text-sky-800 ">
-                    Future Plans
-                  </h3>
-                  <ol className="flex list-outside list-none flex-col place-items-start gap-y-2 pl-4 text-left font-normal">
-                    <li className="standard">
-                      Implement Recipe System that will evaluate available
-                      inventory.
-                    </li>
-                    <li className="standard">
-                      Implement Social Feed for chefs and hobbiest to connect,
-                      share, comment, and like recipes.
-                    </li>
-                  </ol>
-                </div>
-                <div className="flex place-content-center pt-6">
-                  <NeuBtn
-                    route="https://github.com/mkrain9"
-                    target="_blank"
-                    color="text-yellow"
-                  >
-                    <AiOutlineCode className="h-7 w-7 text-yellow-400 hover:text-yellow-500" />
-                    <p>Code</p>
-                  </NeuBtn>
-                </div>
-                <div className="mt-4 flex w-full flex-row place-content-center border-t-2 border-b-2 pb-4 pl-4 pr-8 pt-0 xs:overflow-x-scroll">
-                  <div className="flex flex-row gap-x-6 xs:ml-[28rem]">
+                <div className="mb-10 flex w-full flex-row place-content-center border-b-2 pb-4 pl-4 pr-4 pt-0 xs:overflow-x-scroll">
+                  <div className="flex flex-row gap-x-6 xs:mr-[2rem] xs:ml-[28rem]">
                     <IPhoneCard
                       image={KnockHomeScreen}
                       description={'"Knock" to sign-in'}
@@ -115,6 +59,58 @@ const projects = () => {
                       description={'Plan your kitchen organization'}
                     />
                   </div>
+                </div>
+                <NeuCard data={Kdata} />
+                <div className="flex place-content-center justify-evenly ">
+                  <NeuBtn
+                    route="https://github.com/mkrain9"
+                    target="_blank"
+                    color="text-green"
+                  >
+                    <AiOutlineCode className="h-7 w-7 text-green-400 hover:text-green-500" />
+                    <p>App</p>
+                  </NeuBtn>
+                  <NeuBtn
+                    route="https://github.com/mkrain9"
+                    target="_blank"
+                    color="text-yellow"
+                  >
+                    <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
+                    <p>Code</p>
+                  </NeuBtn>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
+            <div className="relative top-20 flex flex-row border-b-2">
+              <h2 className="flex place-items-start pb-5 text-5xl font-bold">
+                This Website
+              </h2>
+              <p className="absolute right-0 flex translate-y-2 place-items-start py-5 font-bold italic xs:text-sm">
+                Personal Portfolio
+              </p>
+            </div>
+            <div className="relative top-20">
+              <div className="relative left-0">
+                <NeuCard data={Wdata} />
+                <div className="flex place-content-center justify-evenly ">
+                  <NeuBtn
+                    route="https://github.com/mkrain9"
+                    target="_blank"
+                    color="text-yellow"
+                  >
+                    <AiOutlineCode className="h-7 w-7 text-green-400 hover:text-green-500" />
+                    <p>App</p>
+                  </NeuBtn>
+                  <NeuBtn
+                    route="https://github.com/mkrain9"
+                    target="_blank"
+                    color="text-yellow"
+                  >
+                    <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
+                    <p>Code</p>
+                  </NeuBtn>
                 </div>
               </div>
             </div>

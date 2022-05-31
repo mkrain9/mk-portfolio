@@ -1,0 +1,30 @@
+{
+  "0": {
+    "section": "Details",
+    "details": [
+      "Full Stack MERN Application",
+      "Auth0 Integration utilizing JSON Web Tokens",
+      "MongoDB Cloud Services",
+      "One to Many | Many to One | Many to Many Data Structures",
+      "Frontend hosted on Netlify",
+      "Server hosted on Heroku"
+    ],
+    "links": []
+  },
+  "1": {
+    "section": "Future Plans",
+    "details": [
+      "Implement Recipe System that will evaluate available inventory.",
+      "Implement Social Feed for chefs and hobbiests to connect, share, comment, and like recipes."
+    ],
+    "links": []
+  },
+  "2": {
+    "section": "Blog",
+    "details": [
+      "Creating Dynamically Nested Components",
+      "Utilizing MongoDB Aggregate Pipeline to create relationships"
+    ],
+    "links": ["blog/knock/1", "blog/knock/2"]
+  }
+}

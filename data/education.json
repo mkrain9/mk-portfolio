@@ -1,0 +1,20 @@
+{
+  "0": {
+    "section": "The Pennsylvania State University",
+    "subheader": "August 2015 - May 2019",
+    "details": ["Bachelor of Science in Chemical Engineering"]
+  },
+  "1": {
+    "section": "University College London",
+    "subheader": "Spring 2018",
+    "details": ["Semester Abroad"]
+  },
+  "2": {
+    "section": "Motive",
+    "details": [
+      "To prove my ability to learn complex and abstract concepts",
+      "To gain a complete range of technical skills. From problem solving on the quantum and molecular scale, to the design of processing pipelines for chemical plants.",
+      "And of course, to be able to understand the intimidating \"chalkboard mathematics\" seen in movies."
+    ]
+  }
+}

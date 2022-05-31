@@ -1,0 +1,15 @@
+{
+  "0": {
+    "section": "Details",
+    "details": [
+      "NextJS Web Application with Framer Motion Integration",
+      "Directory for Projects, Resume, LinkedIn Social, and Github",
+      "Custom Neumorphism UI theme",
+      "Hosted on Vercel"
+    ]
+  },
+  "1": {
+    "section": "Future Plans",
+    "details": ["Expand scope for more projects"]
+  }
+}
