@@ -22,7 +22,7 @@ const projects = () => {
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="static flex w-full flex-1 flex-col items-center justify-center px-4 text-center">
+      <main className="static flex w-full flex-1 flex-col items-center justify-center px-4 text-center xs:px-0">
         <div className="absolute top-0">
           <a href="/" className="flex flex-col items-center justify-center">
             <IoMdArrowDropup className="h-7 w-7 text-blueSteel" />
@@ -34,17 +34,17 @@ const projects = () => {
             <h1 className="pb-24 pt-20">Projects</h1>
           </div>
           <div className="mb-40 sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
-            <div className="relative top-20 flex flex-row border-b-2">
-              <h2 className="flex place-items-start pb-5 text-5xl font-bold">
-                Knock
-              </h2>
-              <p className="absolute right-0 flex translate-y-2 place-items-start py-5 font-bold italic xs:text-sm">
-                Kitchen Inventory Application
-              </p>
+            <div className="relative top-20 font-bold">
+              <div className="flex flex-col place-items-center">
+                <h2 className="flex text-5xl">Knock</h2>
+                <p className="flex translate-y-2 pt-5 pb-10 font-bold italic xs:text-sm">
+                  Kitchen Inventory Application
+                </p>
+              </div>
             </div>
             <div className="relative top-20">
               <div className="relative left-0">
-                <div className="mb-10 flex w-full flex-row place-content-center border-b-2 pb-4 pl-4 pr-4 pt-0 xs:overflow-x-scroll">
+                <div className="mb-10 flex w-full flex-row place-content-center border-b-2 px-4 pb-4 pt-0 xs:overflow-x-scroll">
                   <div className="flex flex-row gap-x-6 xs:mr-[4rem] xs:ml-[32rem]">
                     <IPhoneCard
                       image={KnockHomeScreen}
@@ -60,57 +60,53 @@ const projects = () => {
                     />
                   </div>
                 </div>
-                <NeuCard data={Kdata} />
-                <div className="flex place-content-center justify-evenly ">
-                  <NeuBtn
-                    route="https://github.com/mkrain9"
-                    target="_blank"
-                    color="text-green"
-                  >
-                    <AiOutlineCode className="h-7 w-7 text-green-400 hover:text-green-500" />
-                    <p>App</p>
-                  </NeuBtn>
-                  <NeuBtn
-                    route="https://github.com/mkrain9"
-                    target="_blank"
-                    color="text-yellow"
-                  >
-                    <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
-                    <p>Code</p>
-                  </NeuBtn>
+                <div className="px-4">
+                  <NeuCard data={Kdata} />
+                  <div className="flex place-content-center justify-evenly ">
+                    <NeuBtn
+                      route="https://knock-app.netlify.app/"
+                      target="_blank"
+                      color="text-green"
+                    >
+                      <AiOutlineCode className="h-7 w-7 text-green-400 hover:text-green-500" />
+                      <p>App</p>
+                    </NeuBtn>
+                    <NeuBtn
+                      route="https://github.com/mkrain9"
+                      target="_blank"
+                      color="text-yellow"
+                    >
+                      <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
+                      <p>Code</p>
+                    </NeuBtn>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="sm:w-full md:w-3/4 lg:w-3/4 xs:w-full">
-            <div className="relative top-20 flex flex-row border-b-2">
-              <h2 className="flex place-items-start pb-5 text-5xl font-bold">
-                This Website
-              </h2>
-              <p className="absolute right-0 flex translate-y-2 place-items-start py-5 font-bold italic xs:text-sm">
-                Personal Portfolio
-              </p>
+            <div className="relative top-20 border-b-2 font-bold">
+              <div className="flex flex-col place-items-center">
+                <h2 className="flex text-5xl ">This Website</h2>
+                <p className="flex translate-y-2 pt-5 pb-10 font-bold italic xs:text-sm">
+                  Personal Portfolio
+                </p>
+              </div>
             </div>
             <div className="relative top-20">
               <div className="relative left-0">
-                <NeuCard data={Wdata} />
-                <div className="flex place-content-center justify-evenly ">
-                  <NeuBtn
-                    route="https://github.com/mkrain9"
-                    target="_blank"
-                    color="text-yellow"
-                  >
-                    <AiOutlineCode className="h-7 w-7 text-green-400 hover:text-green-500" />
-                    <p>App</p>
-                  </NeuBtn>
-                  <NeuBtn
-                    route="https://github.com/mkrain9"
-                    target="_blank"
-                    color="text-yellow"
-                  >
-                    <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
-                    <p>Code</p>
-                  </NeuBtn>
+                <div className="px-4">
+                  <NeuCard data={Wdata} />
+                  <div className="flex place-content-center justify-evenly ">
+                    <NeuBtn
+                      route="https://github.com/mkrain9/mk-portfolio"
+                      target="_blank"
+                      color="text-yellow"
+                    >
+                      <AiFillGithub className="h-7 w-7 text-stone-400 hover:text-stone-500" />
+                      <p>Code</p>
+                    </NeuBtn>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,7 +123,7 @@ const projects = () => {
         </div>
       </main>
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 5/11/2022</p>
+        <p>Updated 5/31/2022</p>
       </footer>
       {/* 
       <PortfolioCard

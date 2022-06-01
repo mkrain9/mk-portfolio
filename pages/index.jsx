@@ -228,7 +228,7 @@ const Home = () => {
       </main>
 
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 5/11/2022</p>
+        <p>Updated 5/31/2022</p>
       </footer>
     </div>
   )

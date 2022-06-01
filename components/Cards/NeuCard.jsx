@@ -9,21 +9,49 @@ const NeuCard = ({ data, title }) => {
   const header = title ? title : null
   return (
     <div className="mb-6 flex h-full flex-col gap-y-2 rounded-3xl p-10 shadow-neumorphic">
-      <NeuElement
-        shadowInner={false}
-        height={'h-min'}
-        width={'w-min'}
-        radius={'rounded-full'}
-        paddingX={`${header ? 'px-8' : 'px-4'}`}
-        paddingY={'py-4'}
-      >
-        <h3
-          key={header}
-          className="standard flex place-items-start text-xl font-bold text-sky-800"
+      <div className="flex flex-row justify-between">
+        <NeuElement
+          shadowInner={false}
+          height={'h-min'}
+          width={'w-min'}
+          radius={'rounded-full'}
+          paddingX={`${header ? 'px-8' : 'px-4'}`}
+          paddingY={'py-4'}
         >
-          {header}
-        </h3>
-      </NeuElement>
+          <h3
+            key={header}
+            className="standard flex place-items-start text-xl font-bold text-sky-800"
+          >
+            {header}
+          </h3>
+        </NeuElement>
+        <div className="flex flex-row gap-x-4">
+          <NeuElement
+            shadowInner={false}
+            height={'h-1'}
+            width={'w-1'}
+            radius={'rounded-full'}
+            paddingX={'px-2'}
+            paddingY={'py-2'}
+          />
+          <NeuElement
+            shadowInner={false}
+            height={'h-1'}
+            width={'w-1'}
+            radius={'rounded-full'}
+            paddingX={'px-2'}
+            paddingY={'py-2'}
+          />
+          <NeuElement
+            shadowInner={false}
+            height={'h-1'}
+            width={'w-1'}
+            radius={'rounded-full'}
+            paddingX={'px-3'}
+            paddingY={'py-2'}
+          />
+        </div>
+      </div>
       {dataArray.map((index) =>
         index.section !== 'Blog' ? (
           <>
@@ -75,7 +103,7 @@ const NeuCard = ({ data, title }) => {
           <>
             <h3
               key={index.section}
-              className="standard flex place-items-start pb-1 text-xl font-bold text-sky-800"
+              className="standard flex place-items-start pt-8 pb-1 text-xl font-bold text-sky-800"
             >
               {index.section}
             </h3>
