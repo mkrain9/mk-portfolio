@@ -11,7 +11,7 @@ const IPhoneCard = ({ image, description }) => {
           className="rounded-2xl border-2 "
         />
       </div>
-      <p className="truncate pt-4 font-bold">{description}</p>
+      <p className="truncate pt-4 pb-1 font-bold">{description}</p>
     </div>
   )
 }

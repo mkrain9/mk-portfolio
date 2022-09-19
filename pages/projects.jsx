@@ -48,15 +48,15 @@ const projects = () => {
                   <div className="flex flex-row gap-x-6 xs:mr-[4rem] xs:ml-[32rem]">
                     <IPhoneCard
                       image={KnockHomeScreen}
-                      description={'"Knock" to sign-in'}
-                    />
-                    <IPhoneCard
-                      image={KnockItemsScreen}
-                      description={'View all your items'}
+                      description={'Sign-in screen'}
                     />
                     <IPhoneCard
                       image={KnockKitchenScreen}
                       description={'Plan your kitchen organization'}
+                    />
+                    <IPhoneCard
+                      image={KnockItemsScreen}
+                      description={'View all your items'}
                     />
                   </div>
                 </div>
