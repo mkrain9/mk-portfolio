@@ -17,6 +17,7 @@ const NeuCard = ({ data, title }) => {
           radius={'rounded-full'}
           paddingX={`${header ? 'px-8' : 'px-4'}`}
           paddingY={'py-4'}
+          border={`border-4 ${header ? 'border-sky-300' : 'border-sky-400'} `}
         >
           <h3
             key={header}

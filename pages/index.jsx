@@ -25,14 +25,14 @@ const Home = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-4 text-center">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center">
           <div className="flex flex-row font-bold sm:text-4xl md:text-5xl lg:text-6xl xs:text-xl ">
             <h1 className="pb-4">Matthew Krain </h1>
             <h1 className="bg-blue-400 pb-4 subpixel-antialiased">
               | Software Developer
             </h1>
           </div>
-          <div className="flex w-full flex-row justify-evenly md:pt-4 lg:pt-4 xs:justify-between">
+          <div className="flex w-full flex-row justify-evenly pt-6 xs:justify-between">
             <NeuBtn route="projects" target="_parent" color="text-red">
               <AiOutlineCode className="h-7 w-7 text-red-400 hover:text-red-500" />
               <p>Projects</p>
