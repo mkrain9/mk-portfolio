@@ -18,7 +18,7 @@ import PEData from '../data/resume_professional_experience.json'
 import SData from '../data/resume_skills.json'
 
 const geoUrl =
-  'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json'
+  'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/united-states/higher-quality-5m/5m-US-counties.json'
 
 const resume = () => {
   return (
@@ -199,7 +199,9 @@ const resume = () => {
               href="/resume"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:px-4">Blog</p>
+              <p className="border-b-2 border-white p-1 hover:px-4">
+                Blog - [Under development]
+              </p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>
