@@ -34,7 +34,9 @@ const resume = () => {
             className="flex flex-col items-center justify-center"
           >
             <IoMdArrowDropup className="h-7 w-7 text-blueSteel" />
-            <p className="border-t-2 border-white p-1 hover:px-4">Projects</p>
+            <p className="border-t-2 border-white p-1 transition-[padding] hover:px-4">
+              Projects
+            </p>
           </a>
         </div>
         <div className="flex w-full flex-col items-center justify-center">
@@ -199,7 +201,7 @@ const resume = () => {
               href="/resume"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:px-4">
+              <p className="border-b-2 border-white p-1 transition-[padding] hover:px-4">
                 Blog - [Under development]
               </p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
@@ -208,7 +210,7 @@ const resume = () => {
         </div>
       </main>
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 5/31/2022</p>
+        <p>Updated 9/18/2022</p>
       </footer>
     </div>
   )

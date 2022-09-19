@@ -26,7 +26,9 @@ const projects = () => {
         <div className="absolute top-0">
           <a href="/" className="flex flex-col items-center justify-center">
             <IoMdArrowDropup className="h-7 w-7 text-blueSteel" />
-            <p className="border-t-2 border-white p-1 hover:px-4">Home</p>
+            <p className="border-t-2 border-white p-1 transition-[padding] hover:px-4">
+              Home
+            </p>
           </a>
         </div>
         <div className="flex w-full flex-col items-center justify-center">
@@ -116,14 +118,16 @@ const projects = () => {
               href="/resume"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:px-4">Resume</p>
+              <p className="border-b-2 border-white p-1 transition-[padding] hover:px-4">
+                Resume
+              </p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>
         </div>
       </main>
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 5/31/2022</p>
+        <p>Updated 9/18/2022</p>
       </footer>
       {/* 
       <PortfolioCard

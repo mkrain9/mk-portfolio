@@ -74,7 +74,9 @@ const Home = () => {
               href="/projects"
               className="flex flex-col items-center justify-center"
             >
-              <p className="border-b-2 border-white p-1 hover:px-4">Projects</p>
+              <p className="border-b-2 border-white p-1 transition-[padding] hover:px-4">
+                Projects
+              </p>
               <IoMdArrowDropdown className="h-7 w-7 text-blueSteel" />
             </a>
           </div>
@@ -228,7 +230,7 @@ const Home = () => {
       </main>
 
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 5/31/2022</p>
+        <p>Updated 9/18/2022</p>
       </footer>
     </div>
   )
