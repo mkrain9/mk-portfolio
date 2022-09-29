@@ -42,7 +42,7 @@ const NeuCard = ({ data, title }) => {
         <div className="flex flex-row gap-x-4">
           <motion.div
             animate={{
-              x: [0, -50, 0],
+              x: header ? [0, -25, 0] : [0, -50, 0],
             }}
             transition={{
               duration: 6,
