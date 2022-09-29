@@ -32,7 +32,18 @@ const Home = () => {
               | Software Developer
             </h1>
           </div>
-          <div className="flex w-full flex-row justify-evenly pt-6 xs:justify-between">
+          <div className="flex w-full flex-wrap justify-evenly font-light sm:flex-col md:flex-row lg:flex-row xs:flex-col xs:text-left">
+            <h3 className="sm:pb-2 md:pb-0 lg:pb-0  lg:text-xl xs:pb-2">
+              <b className="font-bold">Phone: </b>
+              1-856-904-7940
+            </h3>
+
+            <h3 className="lg:text-xl">
+              <b className="font-bold">Email: </b>
+              Krainm9@gmail.com
+            </h3>
+          </div>
+          <div className="flex w-full flex-row justify-evenly pt-6 xs:justify-between	">
             <NeuBtn route="projects" target="_parent" color="text-red">
               <AiOutlineCode className="h-7 w-7 text-red-400 hover:text-red-500" />
               <p>Projects</p>
@@ -58,17 +69,7 @@ const Home = () => {
               <p>Github</p>
             </NeuBtn>
           </div>
-          <div className="flex w-full flex-wrap justify-evenly pt-6 font-light sm:flex-col md:flex-row lg:flex-row xs:flex-col xs:text-left">
-            <h3 className="sm:pb-2 md:pb-0 lg:pb-0  lg:text-2xl xs:pb-2">
-              <b className="font-bold">Phone: </b>
-              1-856-904-7940
-            </h3>
 
-            <h3 className="lg:text-2xl">
-              <b className="font-bold">Email: </b>
-              Krainm9@gmail.com
-            </h3>
-          </div>
           <div className="absolute bottom-1/4">
             <a
               href="/projects"

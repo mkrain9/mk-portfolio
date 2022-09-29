@@ -1,5 +1,6 @@
 import React from 'react'
 import NeuElement from '../Elements/NeuElement'
+import { motion } from 'framer-motion'
 
 const NeuCard = ({ data, title }) => {
   const dataArray = []
@@ -10,23 +11,55 @@ const NeuCard = ({ data, title }) => {
   return (
     <div className="mb-6 flex h-full flex-col gap-y-2 rounded-3xl p-10 shadow-neumorphic">
       <div className="flex flex-row justify-between">
-        <NeuElement
-          shadowInner={false}
-          height={'h-min'}
-          width={'w-min'}
-          radius={'rounded-full'}
-          paddingX={`${header ? 'px-8' : 'px-4'}`}
-          paddingY={'py-4'}
-          border={`border-4 ${header ? 'border-sky-300' : 'border-sky-400'} `}
+        <motion.div
+          animate={{
+            y: header ? [0, 0, 0] : [0, 5, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            type: 'tween',
+            ease: 'easeInOut',
+          }}
         >
-          <h3
-            key={header}
-            className="standard flex place-items-start text-xl font-bold text-sky-800"
+          <NeuElement
+            shadowInner={false}
+            height={'h-min'}
+            width={'w-min'}
+            radius={'rounded-full'}
+            paddingX={`${header ? 'px-8' : 'px-4'}`}
+            paddingY={'py-4'}
+            border={`border-4 ${header ? 'border-sky-300' : 'border-sky-400'} `}
           >
-            {header}
-          </h3>
-        </NeuElement>
+            <h3
+              key={header}
+              className="standard flex place-items-start text-xl font-bold text-sky-800"
+            >
+              {header}
+            </h3>
+          </NeuElement>
+        </motion.div>
         <div className="flex flex-row gap-x-4">
+          <motion.div
+            animate={{
+              x: [0, -50, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              type: 'tween',
+              ease: 'easeInOut',
+            }}
+          >
+            <NeuElement
+              shadowInner={false}
+              height={'h-1'}
+              width={'w-1'}
+              radius={'rounded-full'}
+              paddingX={'px-2'}
+              paddingY={'py-2'}
+            />
+          </motion.div>
           <NeuElement
             shadowInner={false}
             height={'h-1'}
@@ -35,22 +68,27 @@ const NeuCard = ({ data, title }) => {
             paddingX={'px-2'}
             paddingY={'py-2'}
           />
-          <NeuElement
-            shadowInner={false}
-            height={'h-1'}
-            width={'w-1'}
-            radius={'rounded-full'}
-            paddingX={'px-2'}
-            paddingY={'py-2'}
-          />
-          <NeuElement
-            shadowInner={false}
-            height={'h-1'}
-            width={'w-1'}
-            radius={'rounded-full'}
-            paddingX={'px-3'}
-            paddingY={'py-2'}
-          />
+          <motion.div
+            animate={{
+              y: [0, 0, 300, 0, 0],
+              x: [0, 30, 30, 30, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              type: 'tween',
+              ease: 'easeInOut',
+            }}
+          >
+            <NeuElement
+              shadowInner={false}
+              height={'h-1'}
+              width={'w-1'}
+              radius={'rounded-full'}
+              paddingX={'px-3'}
+              paddingY={'py-2'}
+            />
+          </motion.div>
         </div>
       </div>
       {dataArray.map((index) =>
