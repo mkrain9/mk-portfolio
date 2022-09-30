@@ -6,7 +6,7 @@ const NeuElement = (props) => {
 
   return (
     <div
-      className={`flex ${props.color} ${props.border} ${props.height} min-h-[1px] ${props.paddingX} ${props.paddingY} ${props.width} ${shadowDirection} ${props.radius}`}
+      className={`flex ${props.color} ${props.border} ${props.height} min-h-[1px] ${props.paddingX} ${props.paddingY} ${props.width} ${shadowDirection} ${props.radius} whitespace-pre-line`}
     >
       {props.children}
     </div>

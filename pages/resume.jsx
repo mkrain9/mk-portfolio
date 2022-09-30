@@ -10,12 +10,15 @@ import {
   Annotation,
 } from 'react-simple-maps'
 
+import { motion } from 'framer-motion'
+
 import NeuCard from '../components/Cards/NeuCard'
 import NeuBtn from '../components/Buttons/NeuBtn'
 import EData from '../data/summary.json'
 import EDUData from '../data/education.json'
 import PEData from '../data/resume_professional_experience.json'
 import SData from '../data/resume_skills.json'
+import { MotionConfig } from 'framer-motion'
 
 const geoUrl =
   'https://raw.githubusercontent.com/deldersveld/topojson/master/countries/united-states/higher-quality-5m/5m-US-counties.json'
@@ -186,6 +189,7 @@ const resume = () => {
                   </Marker>
                 </ComposableMap>
               </div>
+
               <div className="sm:pt-0 md:pt-14 lg:pt-0 xs:pt-0">
                 <div className="relative left-0">
                   <NeuCard data={PEData} title="Professional Experience" />
@@ -210,7 +214,7 @@ const resume = () => {
         </div>
       </main>
       <footer className="flex h-24 w-full flex-col items-center justify-center border-t-2">
-        <p>Updated 9/18/2022</p>
+        <p>Updated 9/30/2022</p>
       </footer>
     </div>
   )

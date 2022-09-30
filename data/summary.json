@@ -1,9 +1,9 @@
 {
   "0": {
+    "section": "Matthew J. Krain",
+    "subheader": "Self-taught programmer with a background in science and engineering.",
     "details": [
-      "Self-taught programmer with a background in science and engineering.",
-      "For the past three years, worked in the Supply Chain Chemical Manufacturing Industry, earning awards for Safety and Sustainability.",
-      "Gained experience leading teams of SAP System Specialists and Chemical Mixers, while developing how to lead without authority in cross-functional teams."
+      "My inspiration toward programming began years ago when I built my first PowerBI report for a manufacturing site that would automatically refresh whenever a user input data. It was a very simple concept, but truly cutting edge for people who worked at this site. I was able to show team members that data analytics could be automated, and I enjoyed making visuals that told a story and led to actions. \n \n It was a massive change compared to the slow and manual data collecting process, that required updating visuals and pasting into PowerPoint slides. I have continued to incorporate visualization tools since then. Tools that have helped transform our operations, and add new perspective toward managing raw material availability, inventory accuracy, warehouse & labor utilization, safety, etc. \n \n Throughout my 3 years in Chemical Manufacturing, I've gained experience leading teams in Production and Inventory Management. I am eager utilize my skills to pivot into a career of software development to improve business capability and enhance user experience."
     ]
   }
 }

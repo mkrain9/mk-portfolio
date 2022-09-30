@@ -1,11 +1,19 @@
 {
   "0": {
     "section": "Languages",
-    "details": ["Javascript", "HTML", "CSS", "Python", "C#", "VBScript", "DAX"]
+    "details": [
+      "Javascript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Python",
+      "C#",
+      "VBScript",
+      "DAX"
+    ]
   },
   "1": {
     "section": "Frontend",
-
     "details": [
       "ReactJS",
       "NextJS",
@@ -13,8 +21,7 @@
       "Axios API Calls",
       "React Query",
       "React Redux",
-      "Framer Motion",
-      "Moment"
+      "Framer Motion"
     ]
   },
   "2": {
@@ -22,14 +29,29 @@
     "details": ["NodeJS", "Express"]
   },
   "3": {
+    "section": "AWS",
+    "details": [
+      "DynamoDB",
+      "Lambda",
+      "S3",
+      "Amplify",
+      "Cognito",
+      "CloudFormation",
+      "CDK",
+      "API Gateway",
+      "IAM"
+    ]
+  },
+  "4": {
     "section": "Database",
     "details": ["MongoDB Atlas (Cloud)", "MySQL"]
   },
-  "4": {
+  "5": {
     "section": "Hosting",
     "details": ["Netlify", "Heroku", "Vercel"]
   },
-  "5": {
+
+  "6": {
     "section": "Additional Skills",
     "details": [
       "Leading Teams and Leading Without Authority",

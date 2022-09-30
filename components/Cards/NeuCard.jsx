@@ -13,6 +13,7 @@ const NeuCard = ({ data, title }) => {
       <div className="flex flex-row justify-between">
         <motion.div
           animate={{
+            x: header ? [0, 0, 0] : [0, 1, 0],
             y: header ? [0, 0, 0] : [0, 5, 0],
           }}
           transition={{
@@ -39,10 +40,11 @@ const NeuCard = ({ data, title }) => {
             </h3>
           </NeuElement>
         </motion.div>
-        <div className="flex flex-row gap-x-4">
+        <div className="mt-4 flex flex-row gap-x-4">
           <motion.div
             animate={{
-              x: header ? [0, -25, 0] : [0, -50, 0],
+              x: [0, 32, 32, 64, 64, 32, 32, 0],
+              y: [0, 32, 32, 0, 0, -32, -32, 0],
             }}
             transition={{
               duration: 6,
@@ -70,8 +72,8 @@ const NeuCard = ({ data, title }) => {
           />
           <motion.div
             animate={{
-              y: [0, 0, 300, 0, 0],
-              x: [0, 30, 30, 30, 0],
+              x: [0, -35, -35, -70, -70, -35, -35, 0],
+              y: [0, -32, -32, 0, 0, 32, 32, 0],
             }}
             transition={{
               duration: 6,
@@ -111,10 +113,10 @@ const NeuCard = ({ data, title }) => {
                   header ? 'py-2' : 'pb-1'
                 } text-sm xs:flex-col `}
               >
-                <h4 className="text-sky-400" key={index.section}>
+                <h4 className="text-left text-sky-400" key={index.section}>
                   {index.subheader ? index.subheader : null}
                 </h4>
-                <h4 className="text-sky-400" key={index.section}>
+                <h4 className="text-left text-sky-400" key={index.section}>
                   {index.location ? index.location : null}
                 </h4>
               </div>
@@ -128,7 +130,7 @@ const NeuCard = ({ data, title }) => {
                   shadowInner={true}
                   height={'h-min'}
                   width={'w-full'}
-                  radius={'rounded-3xl'}
+                  radius={'rounded-xl'}
                   paddingX={'px-3'}
                 >
                   <li key={item} className="standard w-full py-2">
