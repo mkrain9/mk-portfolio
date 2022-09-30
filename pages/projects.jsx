@@ -7,6 +7,7 @@ import { AiOutlineCode, AiFillGithub } from 'react-icons/ai'
 import KnockHomeScreen from '../images/KnockHomeScreen.PNG'
 import KnockItemsScreen from '../images/KnockItemsScreen.PNG'
 import KnockKitchenScreen from '../images/KnockKitchenScreen.PNG'
+import KnockCartScreen from '../images/KnockCartScreen.PNG'
 
 import NeuBtn from '../components/Buttons/NeuBtn'
 import IPhoneCard from '../components/Cards/IPhoneCard'
@@ -59,6 +60,10 @@ const projects = () => {
                     <IPhoneCard
                       image={KnockItemsScreen}
                       description={'View all your items'}
+                    />
+                    <IPhoneCard
+                      image={KnockCartScreen}
+                      description={'Add expired items to your cart'}
                     />
                   </div>
                 </div>

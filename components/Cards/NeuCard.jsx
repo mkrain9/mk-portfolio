@@ -9,12 +9,12 @@ const NeuCard = ({ data, title }) => {
   }
   const header = title ? title : null
   return (
-    <div className="mb-6 flex h-full flex-col gap-y-2 rounded-3xl p-10 shadow-neumorphic">
+    <div className="mb-6 flex h-full flex-col gap-y-2 rounded-3xl border-2 border-slate-100 p-10 shadow-neumorphic">
       <div className="flex flex-row justify-between">
         <motion.div
           animate={{
             x: header ? [0, 0, 0] : [0, 1, 0],
-            y: header ? [0, 0, 0] : [0, 5, 0],
+            y: header ? [0, 0, 0] : [0, 10, 0],
           }}
           transition={{
             duration: 3,

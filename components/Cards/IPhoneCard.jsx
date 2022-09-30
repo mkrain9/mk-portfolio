@@ -4,7 +4,7 @@ import Image from 'next/image'
 const IPhoneCard = ({ image, description }) => {
   return (
     <div className="flex flex-col place-items-center">
-      <div className="neuGradient mt-8 h-full w-56 rounded-3xl border-4 p-3 shadow-neumorphic">
+      <div className="neuGradient mt-8 h-full w-56 rounded-3xl border-4 border-slate-100 p-3 shadow-neumorphic">
         <Image
           src={image}
           layout="responsive"
